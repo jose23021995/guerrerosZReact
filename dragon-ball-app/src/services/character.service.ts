@@ -1,5 +1,5 @@
-import api from '@/api/axios.config';
-import { type APIResponse, type Character } from '@/interfaces/character.interface';
+import api from '../api/axios.config';
+import { type APIResponse, type Character } from '../interfaces/character.interface';
 
 export const characterService = {
   // Obtenemos la lista paginada

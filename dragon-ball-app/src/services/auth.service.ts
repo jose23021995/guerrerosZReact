@@ -1,4 +1,4 @@
-import { type AuthResponse } from '@/interfaces/auth.interface';
+import { type AuthResponse } from '../interfaces/auth.interface';
 
 export const authService = {
   login: async (username: string, password: string): Promise<AuthResponse> => {

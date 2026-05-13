@@ -1,7 +1,7 @@
-import { useCharacters } from '@/hooks/useCharacters';
-import { Navbar } from '@/components/Navbar';
-import { Table } from '@/components/Table';
-import { type Character } from '@/interfaces/character.interface';
+import { useCharacters } from '../../hooks/useCharacters';
+import { Navbar } from '../../components/Navbar';
+import { Table } from '../../components/Table';
+import { type Character } from '../../interfaces/character.interface';
 
 export const DashboardPage = () => {
   const { characters, isLoading, error } = useCharacters();

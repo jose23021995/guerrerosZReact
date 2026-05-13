@@ -1,4 +1,4 @@
-import { Character } from '@/interfaces/character.interface';
+import { type Character } from '../interfaces/character.interface';
 
 interface Props {
   data: Character[];

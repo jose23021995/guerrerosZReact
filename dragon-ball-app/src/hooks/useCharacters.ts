@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { type Character } from '@/interfaces/character.interface';
-import { characterService } from '@/services/character.service';
+import { type Character } from '../interfaces/character.interface';
+import { characterService } from '../services/character.service';
 
 export const useCharacters = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
