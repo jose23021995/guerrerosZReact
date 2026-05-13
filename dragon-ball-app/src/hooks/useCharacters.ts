@@ -13,22 +13,32 @@ export const useCharacters = () => {
       const data = await characterService.getCharacters();
       setCharacters(data.items);
       setError(null);
-    } catch (err: any) { 
+    } catch (err: any) {
       setError('Error al cargar los personajes de Dragon Ball');
     } finally {
       setIsLoading(false);
     }
   };
 
-  // Cargar automáticamente al montar el componente
+  // FUNCION PARA REACTIVIDAD LOCAL
+  // Esta función busca al personaje por ID y lo reemplaza en el estado local
+  const updateCharacterLocal = (updatedChar: Character) => {
+    setCharacters((prevCharacters) =>
+      prevCharacters.map((char) =>
+        char.id === updatedChar.id ? updatedChar : char
+      )
+    );
+  };
+
   useEffect(() => {
     fetchCharacters();
   }, []);
 
-  return {
-    characters,
-    isLoading,
-    error,
-    refetch: fetchCharacters // Por si queremos un botón de "Recargar"
+  return { 
+    characters, 
+    isLoading, 
+    error, 
+    refetch: fetchCharacters,
+    updateCharacterLocal // <-- Exportamos esto para el modal
   };
 };
