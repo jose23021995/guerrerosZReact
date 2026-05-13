@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { useCharacters } from '../../hooks/useCharacters';
 import { Navbar } from '../../components/Navbar';
 import { Table } from '../../components/Table';
